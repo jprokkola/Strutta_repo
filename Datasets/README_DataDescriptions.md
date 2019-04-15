@@ -113,7 +113,7 @@ File names shown like `this`.
 
 **group** = Population and selection line combined to one group.
 
-**pop** = Fish population, OUV = hatchery population, VAA = River Vaarainjoki (parents captured from the wild).
+**pop** = Fish population: hatchery or wild.
 	
 **selection** = Angling selection line within population. hv = parents with high vulnerability to angling, lv = parents with low vulnerability to angling. 
 
