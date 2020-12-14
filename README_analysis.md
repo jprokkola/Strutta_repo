@@ -63,7 +63,7 @@ ii)	The second behavior dataset: Responses to predator olfactory cues. Use the s
 
 For both datasets, models are produced for three response variables: 
 
-1. Exploration intencisty (proportion of time spent swimming during the trial), modelled using a linear mixed model.
+1. Exploration intensity (proportion of time spent swimming during the trial after emergence), modelled using a linear mixed model.
 2. Latency to emerge from a shelter, which is inversely related to boldness/risk-taking behavior, modelled using a frailty model.
 3. Exploration tendency (whether the fish entered a separate sector of the arena), modelled using a generalized linear mixed model on Bernoulli-distibuted data.
 

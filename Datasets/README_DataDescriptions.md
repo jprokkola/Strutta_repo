@@ -46,7 +46,7 @@ File names shown like `this`.
 ## Dataset 2 – Behavioural data from angling selection lines
 
 `Behavdata_Prokkola_etal.txt`
-> Tab-separated, dots as decimal separators. Behavior experiment data including latency, activity and exploration values from three trials for (almost) all individuals. The data were produced by manual recording from video files using [AV Bio-Statistics v.5.2 software] (http://www.kotikone.fi/ansvain/official.html) (for use, consult Anssi Vainikka). 
+> Tab-separated, dots as decimal separators. Behavior experiment data including latency, exploration intensity and exploration tendency values from three trials for (almost) all individuals. The data were produced by manual recording from video files using [AV Bio-Statistics v.5.2 software] (http://www.kotikone.fi/ansvain/official.html) (for use, consult Anssi Vainikka). 
 
 **Sample** = ID used in blood and DNA sample collection.
 
@@ -86,7 +86,7 @@ File names shown like `this`.
 
 `ControlVsBurbot_data.txt`
 
->Tab-separated, dots as decimal separators. Behavior experiment data including latency, activity and exploration values from a total of six trials for each of 19 fish: three trials with predator cues present, three without predator cues. The data were produced by manual recording from video files using AV Biostatictics software (see above). 
+>Tab-separated, dots as decimal separators. Behavior experiment data including latency, exploration intensity and exploration tendency values from a total of six trials for each of 19 fish: three trials with predator cues present, three without predator cues. The data were produced by manual recording from video files using AV Biostatictics software (see above). 
 
 **Trial** = Combination of "pm", ID and behaviour trial repeat 1-6. 
 
