@@ -4,17 +4,20 @@ Descriptions for datasets in this folder.
 File names shown like `this`.
 
 ## Dataset 1 – Metabolic rate
-`Metabdata_Prokkola_etal.txt`
+`Metabdata_Fishresp_Feb20.txt`
 
-> Tab-separated, dots as decimal separators. Data for oxygen consumption, one value for minimum and average consumption for each fish. The raw data obtained from Loligo intermittent flow respirometer were pre-analysed in [AV Bio-Statistics v.5.2 software] (http://www.kotikone.fi/ansvain/official.html) (for use, consult Anssi Vainikka). Column names and contents:
+> Column names and contents:
 
-**Sample_ID** = ID used in blood and DNA sample collection.
-	
-**PIT** = PIT tag ID
-	
+
+**Batch** = Identifies the day of measurement
+
 **Fish_ID** = Number of individual from 1 to 100, used in analysing behaviour videos.
+
+**Sample_ID** = ID used in DNA sample collection.
 	
-**group** = Population and selection line combined to one group. Used in plots.
+**PIT** = PIT-tag ID
+	
+**group** = Population and selection line combined to one group. 
 	
 **Sex** = Fish sex, -1 = female, 1 = male. Identified with a PCR assay (sex not available for all fish).
            
@@ -22,17 +25,21 @@ File names shown like `this`.
 	
 **pop** = Fish population, Hatchery = Lake Oulujärvi hatchery broodstock, Wild = River Vaarainjoki (parents captured from the wild).
 	
-**selection** = Angling selection line within population. hv = parents with high vulnerability to angling, lv = parents with low vulnerability to angling. 
+**selection** = Angling selection line within population. HV = parents with high vulnerability to angling, LV = parents with low vulnerability to angling. 
 	
 **subgroups** = Photoperiod and group combined into one grouping.
+
+**low10** = Lowest 10 values from measurements for each fish (in mg O2/h).
+
+**q0.1** = 0.1 quantile of measurements for each fish (in mg O2/h).
+
+**q0.2** = 0.2 quantile of measurements for each fish(in mg O2/h).
+
+**ave_MR** = The average of all quality-filtered measurements for each fish (in mg O2/h).
 	
-**Metab_chamber** = Respirometer chamber during measurement (1–4).
-	
-**Mass\_g_postMR** = Fish wet weight immediately after respirometry in grams.
-	
-**Ave\_O2\_mg_h** = The average oxygen consumption of all measurement cycles during the whole measurement period, except the first and last cycle. In mg oxygen per h.
- 
-**Min\_O2\_mg_h** = The minimum oxygen consumption obtained as the average of four least negative slopes after excluding the first, last and the least negative slope.
+**Mass** = Fish wet weight immediately after respirometry in grams.
+
+**Chamber.No** = Respirometer chamber during measurement (CH1–CH4).
 	
 **Temp** = Average water temperature of the respirometer during the measurements for each fish. 
 
@@ -71,69 +78,11 @@ File names shown like `this`.
 
 **Out\_time_min** = Time until the whole body of fish emerged from the start box at the start of behaviour trial, in minutes. Zero indicates fish jumped out before trial started, and 9.75 indicates fish did not emerge during the trial.
 
-**Activity** = Proportion of time fish was actively moving during the trial, calculated as 1 - (time spent still  more than 2 seconds at a time / total time outside the start box during the trial).
+**Intensity** = Proportion of time fish was actively moving during the trial, calculated as 1 - (time spent still  more than 2 seconds at a time / total time outside the start box during the trial).
 
 **Explorated** = Exploration tendency, indicated by 1 = fish entered the section of the arena behind a gate, or 0 = fish did not enter this section.
 
-
-
-## Dataset 3 – cortisol
-
-> Three datasets for calculating cortisol from absorbance values. Absorbance values from a spectrophotometer for the cortisol analysis of plasma samples. Samples were analysed using Enzo cortisol Elisa kit, details in the manuscript.
-
-`Standards_cortisol.txt`
-
-**Y_plate1** = Absorbance (neg. and blank-corrected) on plate 1
-
-**conc_plate1** = Known concentration of cortisol in standards on plate 1
-
-**Y_plate2** = Absorbance (neg. and blank-corrected) on plate 2
-
-**conc_plate2** = nown concentration of cortisol in standards on plate 2
-
-`Sample_OD_plate1.txt` and `Sample_OD_plate2.txt`
-
-**Sample** = ID for fish
-
-**OD** = Absorbance (neg. and blank-corrected)
-
-**Dilution** = Plasma dilution coefficient. Multiply with this to get original values.
-
-
-
-`Plasma_cort_results.txt` 
->The output of above cortisol concentration analysis from above data, combined with other sample details. Used for making a model and plots.
-
-
-**Sample** = ID used in blood and DNA sample collection.
-
-**Fish_ID** = Number of individual, between 1 and 100.
-
-**PIT** = PIT-tag ID
-
-**group** = Population and selection line combined to one group.
-
-**pop** = Fish population: hatchery or wild.
-	
-**selection** = Angling selection line within population. hv = parents with high vulnerability to angling, lv = parents with low vulnerability to angling. 
-
-**Sex** = Fish sex, -1 = female, 1 = male. Identified with a PCR assay (not available for all fish).
-
-**Weight_end** = Fish body mass after all tests (measured between 26th and 29th June 2017).
-
-**Length_end** = Fish whole body length after all tests (measured between 26th and 29th June 2017).
-
-**Tank\_before\_stress_test** = Acclimation tank ID
-
-**Temp\_on\_stress_test** = Water temperature at the time of stress test
-
-**Stress\_test_serial** = Running number for fish captured from the same acclimation tank on the same day
-
-**other** = Other information of the test
-
-**cort\_ng_ml** = measured cortisol concentration ng/ml
-
-## Dataset 4 – behaviour & predation cues
+## Dataset 3 – behaviour & predation cues
 
 `ControlVsBurbot_data.txt`
 
@@ -163,7 +112,7 @@ File names shown like `this`.
 
 **Explorated** = Exploration tendency, indicated by 1 = fish entered the section of the arena behind a gate, or 0 = fish did not enter this section.
 
-**Activity** = Proportion of time fish was actively moving during the trial, calculated as 1 - (time spent still  more than 2 seconds at a time / total time outside the start box during the trial).
+**Intensity** = Proportion of time fish was actively moving during the trial, calculated as 1 - (time spent still  more than 2 seconds at a time / total time outside the start box during the trial).
 
 **Treatment** = Same as Group, but alphabetical order reversed (control = aControl)
 

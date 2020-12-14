@@ -1,16 +1,16 @@
 # README
 
-Data analysis for Prokkola et al. 2018 (submitted in bioRxiv).
+Data analysis for Prokkola et al. (submitted in bioRxiv).
 These scripts have only been used to analyse data in this study and **NO** guarantees are given for suitability in any other purposes.
 
 R codes for analysis are in folder **Scripts**.
 
-Required datasets are in folder **Datasets** – includes a README file, please read it before diving in.
+Required datasets are in folder **Datasets** – includes a README file, please read it before diving in. Permanent repository links for data will be added later.
 
-##Required R libraries:
-R package for ELISA absorbance value analysis:
+##Required R packages:
+Respirometry analysis:
 
-[drc] (https://www.rdocumentation.org/packages/drc/versions/3.0-1)
+[Fishresp] (https://cran.r-project.org/web/packages/FishResp/index.html)
 
 Statistical models:
 
@@ -37,13 +37,25 @@ Plots:
 [patchwork] (https://github.com/thomasp85/patchwork)
 
 
-##Statistical analysis of metabolic rate data 
-i)	Minimum metabolic rate. Data has been prepared in AV Biostatistics v. 5.2 
+## 1. Analysis of metabolic rate data 
 
-ii)	Average metabolic rate. This is analysed as it reflects stress sensitivity (general unhappiness with being confined in the respirometer chamber).
+i) Perform quality control and transform raw data into mg O2/kg/h oxygen consumption.
 
-Use the script `Metabrate_Cort_analyses_browntrout.R`. Inputs include metabolic rate data from `Metabdata_Prokkola_etal.txt` and `Plasma_cort_results.txt`. Conduct analysis, check assumptions of analysis, and plot predicted values with confidence intervals. Details provided in the script and manuscript.
-##	Statistical analysis of behaviour data
+Scripts: `Metabrate_dataprep.R`,`Metabrate_slope_analysis.R`. 
+
+Input files:  Separate file for each batch (32 batches), available in XXX (added later).
+
+Sample information file: `Metab_sampledata_Prokkola_etal.txt`
+
+ii)	Standard metabolic rate statistical analysis. 
+
+Script: `Metabrate_average_analysis.R`
+
+Input file:`Metabdata_Fishresp_Feb20.txt`.
+ 
+
+
+##	 2. Statistical analysis of behaviour data
 i)	The first behavior dataset: Angling selection experiment
 Use the script `Behavdata_analysis.R`. Input file: `Behavdata_Prokkola_etal.txt`.
 
@@ -51,11 +63,11 @@ ii)	The second behavior dataset: Responses to predator olfactory cues. Use the s
 
 For both datasets, models are produced for three response variables: 
 
-1. Activity (proportion of time spent swimming during the trial), modelled using a linear mixed model.
-2. Boldness (latency to emerge from a shelter), modelled using a frailty model.
+1. Exploration intencisty (proportion of time spent swimming during the trial), modelled using a linear mixed model.
+2. Latency to emerge from a shelter, which is inversely related to boldness/risk-taking behavior, modelled using a frailty model.
 3. Exploration tendency (whether the fish entered a separate sector of the arena), modelled using a generalized linear mixed model on Bernoulli-distibuted data.
 
-Finally, in `Behavdata_analysis.R`, we also calculate correlations between metabolic rate residuals (individual variation) and BLUPS from LMM of activity.
+Finally, in `Behavdata_analysis.R`, we also calculate correlations between log **metabolic rate** - log body mass residuals (individual variation) **and** BLUPS from LMM of **exploration intensity and latency** in the individuals/trials where fish emerged from the shelter.
 
-The scripts include the analysis, checking assumptions of analysis, and plotting results/predictions. Details are included in the script and publication.
+For details see the scripts and manuscript.
 
